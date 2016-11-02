@@ -265,5 +265,10 @@
 	}
 
 	// Run automatically at page load to pre-populate the <datalist> element
-	getPopularTags();
+	//getPopularTags();
+    
+    document.querySelector("#check-reports").onclick = checkReports;
+
+	// Run automatically at page load
+	checkReports();
 })();
