@@ -175,7 +175,7 @@
 				for (var o=0,ol=totalRelatedTags, relatedTag; o<ol; o++) {
 					relatedTag = allRelatedTags[o];
 					relatedTagsResults += "<li>" + 
-									"<a href=\"http://stackoverflow.com/questions/tagged/" + relatedTag.name + "\">" +
+									"<a href=\"https://stackoverflow.com/questions/tagged/" + relatedTag.name + "\">" +
 									relatedTag.name + "</a></li>";
 				}
 				relatedTagsResults += "</ul>";
@@ -220,29 +220,29 @@
 
 	function getQuestionsWithActivity () {
 		// All questions for a certain time period - http://api.stackexchange.com/docs/search
-		getItems("withActivity", "http://api.stackexchange.com/2.2/search?fromdate=" + questions.startDate + "&todate=" + questions.	endDate + "&order=desc&sort=activity&tagged=" + questions.tag + "&site=stackoverflow&filter=!9WA((MBIa");
+		getItems("withActivity", "https://api.stackexchange.com/2.2/search?fromdate=" + questions.startDate + "&todate=" + questions.	endDate + "&order=desc&sort=activity&tagged=" + questions.tag + "&site=stackoverflow&filter=!9WA((MBIa");
 	}
 
 	function getUnansweredQuestions () {
 		// All questions without an answer for a certain time period - http://api.stackexchange.com/docs/unanswered-questions
 		// "At this time a question must have at least one upvoted answer to be considered answered"
-		getItems("unanswered", "http://api.stackexchange.com/2.2/questions/unanswered?fromdate=" + questions.startDate + "&todate=" + questions.endDate + "&order=desc&sort=activity&tagged=" + questions.tag + "&site=stackoverflow&filter=!9WA((MBIa");
+		getItems("unanswered", "https://api.stackexchange.com/2.2/questions/unanswered?fromdate=" + questions.startDate + "&todate=" + questions.endDate + "&order=desc&sort=activity&tagged=" + questions.tag + "&site=stackoverflow&filter=!9WA((MBIa");
 	}
 
 	function topAnswerers () {
-		getItems("topAnswerers", "http://api.stackexchange.com/2.2/tags/" + questions.tag + "/top-answerers/" + questions.timePeriod + "?site=stackoverflow");
+		getItems("topAnswerers", "https://api.stackexchange.com/2.2/tags/" + questions.tag + "/top-answerers/" + questions.timePeriod + "?site=stackoverflow");
 	}
 
 	function topAskers () {
-		getItems("topAskers", "http://api.stackexchange.com/2.2/tags/" + questions.tag + "/top-askers/" + questions.timePeriod + "?site=stackoverflow");
+		getItems("topAskers", "https://api.stackexchange.com/2.2/tags/" + questions.tag + "/top-askers/" + questions.timePeriod + "?site=stackoverflow");
 	}
 
 	function faq () {
-		getItems("faq", "http://api.stackexchange.com/2.2/tags/" + questions.tag + "/faq?site=stackoverflow");
+		getItems("faq", "https://api.stackexchange.com/2.2/tags/" + questions.tag + "/faq?site=stackoverflow");
 	}
 
 	function relatedTags () {
-		getItems("relatedTags", "http://api.stackexchange.com/2.2/tags/" + questions.tag + "/related?site=stackoverflow");
+		getItems("relatedTags", "https://api.stackexchange.com/2.2/tags/" + questions.tag + "/related?site=stackoverflow");
 	}
 
 	function checkReports () {
@@ -261,7 +261,7 @@
 	}
 
 	function getPopularTags () {
-		getItems("popularTags", "http://api.stackexchange.com/2.2/tags?pagesize=100&order=desc&sort=popular&site=stackoverflow");
+		getItems("popularTags", "https://api.stackexchange.com/2.2/tags?pagesize=100&order=desc&sort=popular&site=stackoverflow");
 	}
 
 	// Run automatically at page load to pre-populate the <datalist> element
