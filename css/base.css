@@ -46,6 +46,11 @@ input[type=date] {
 }
 
 input[type=submit] {
+  font-size: 20px;
+  width: 200px;
+  background: #e5315b;
+  border: none;
+  border-radius: 5px
   width: 200px;
 }
 

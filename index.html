@@ -14,6 +14,7 @@
         <section role="region">
             <header>
                 <h1>
+                    <img src="images/4sq-icon.png" alt=""> on
                     <img src="images/stack-overflow-logo.png" alt=""> dashboard
                 </h1>
             </header>
@@ -32,12 +33,9 @@
             <div>
                 <form id="selection-form">
                     <label for="stack-overflow-tag">Tag:</label>
-                    <input id="stack-overflow-tag" list="popular-tags">
-                    <datalist id="popular-tags">
-                        <option value="Java">
-                        <option value="JavaScript">
-                        <option value="HTML">
-                    </datalist>
+                    <select id="stack-overflow-tag">
+                        <option value="foursquare" selected>foursquare</option>
+                    </select>
 
                     <label for="start-date">Dates</label>
                     <input type="date" id="start-date" value="2014-04-01">
