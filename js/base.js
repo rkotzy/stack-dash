@@ -8,7 +8,7 @@
 		month = new Date().getMonth() + 1,
 		daysinMonth = 31,
 		questions = {
-			tag : "firefox-os",
+			tag : "foursquare",
 			startDate : "2014-05-01",
 			endDate : "2014-05-31",		
 			timePeriod : "month",
@@ -94,7 +94,7 @@
 				for (var j=0,jl=totalUnanswereds, question; j<jl; j++) {
 					question = allUnanswered[j];
 					unansweredResults += "<li>" + 
-									"<a href=\"" + question.link + "\">" +
+									"<a href=\"" + question.link + "\" target='_blank'>" +
 									question.title + "</a><br>" + 
 									"<small>" + question.tags.toString(", ") + "</small></li>";
 				}
@@ -114,7 +114,7 @@
 				for (var k=0,kl=totalTopAnswerers, answerer; k<kl; k++) {
 					answerer = allTopAnswerers[k];
 					topAnswerersResults += "<li>" + 
-										"<a href=\"" + answerer.user.link + "\">" +
+										"<a href=\"" + answerer.user.link + "\" target='_blank'>" +
 										"<img src=\"" + answerer.user.profile_image + "\" alt=\"\">" + 
 										answerer.user.display_name + "</a>" + ", Score: " + answerer.score + " (" + 
 										answerer.post_count + " question" + ((answerer.post_count > 1)? "s" : "") + ")</li>";
@@ -135,7 +135,7 @@
 				for (var m=0,ml=totalTopAskers, asker; m<ml; m++) {
 					asker = allTopAskers[m];
 					topAskersResults += "<li>" + 
-										"<a href=\"" + asker.user.link + "\">" +
+										"<a href=\"" + asker.user.link + "\" target='_blank'>" +
 										"<img src=\"" + asker.user.profile_image + "\" alt=\"\">" + 
 										asker.user.display_name + "</a>" + ", " + asker.post_count + " question" + ((asker.post_count > 1)? "s" : "") + "</li>";
 				}
@@ -155,7 +155,7 @@
 				for (var n=0,nl=totalFaqs, faqQuestion; n<nl; n++) {
 					faqQuestion = allFaq[n];
 					faqResults += "<li>" + 
-									"<a href=\"" + faqQuestion.link + "\">" +
+									"<a href=\"" + faqQuestion.link + "\" target='_blank'>" +
 									faqQuestion.title + "</a><br>" + 
 									"<small>" + faqQuestion.tags.toString(", ") + "</small></li>";
 				}
@@ -175,7 +175,7 @@
 				for (var o=0,ol=totalRelatedTags, relatedTag; o<ol; o++) {
 					relatedTag = allRelatedTags[o];
 					relatedTagsResults += "<li>" + 
-									"<a href=\"https://stackoverflow.com/questions/tagged/" + relatedTag.name + "\">" +
+									"<a href=\"https://stackoverflow.com/questions/tagged/" + relatedTag.name + "\" target='_blank'>" +
 									relatedTag.name + "</a></li>";
 				}
 				relatedTagsResults += "</ul>";
